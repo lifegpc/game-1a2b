@@ -16,7 +16,7 @@ pub fn get_lang() -> String {
         }
         Err(_) => {}
     }
-    if cfg!(windows) {
+    #[cfg(windows)] {
         use std::alloc::alloc;
         use std::alloc::dealloc;
         use std::alloc::Layout;

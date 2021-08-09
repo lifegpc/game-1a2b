@@ -1,3 +1,4 @@
+use crate::i18n::gettext;
 use rand::Rng;
 use std::io;
 
@@ -96,7 +97,7 @@ fn get_num_from_stdin() -> u64 {
         match i {
             Ok(_) => {}
             Err(..) => {
-                println!("this was not an integer: {}", trimed);
+                println!("{} {}", gettext("This was not an integer:"), trimed);
                 continue;
             }
         };
@@ -124,22 +125,24 @@ impl Game {
         let base: u64 = 10;
         let min: u64 = base.pow((self.len - 1) as u32);
         let max: u64 = base.pow(self.len as u32);
-        println!("Start to genrate random number which have {} digits.", self.len);
+        let s = gettext("Start to genrate random number which have <num> digits.").replace("<num>", format!("{}", self.len).as_str());
+        println!("{}", s);
         let mut rng = rand::thread_rng();
         self.num = rng.gen_range(min..max);
         while !check_num_is_vaild(self.num, self.len) {
             self.num = rng.gen_range(min..max);
         }
-        println!("Genrate successfully.");
+        println!("{}", gettext("Genrate successfully."));
         loop {
             let num = get_num_from_stdin();
             if !check_num_is_vaild(num, self.len) {
-                println!("{} is not a vaild input.", num);
+                let s = gettext("<input> is not a vaild input.").replace("<input>", format!("{}", num).as_str());
+                println!("{}", s);
                 continue;
             }
             let r = compare_num(self.num, num, self.len);
             if r.ok {
-                println!("You win!");
+                println!("{}", gettext("You win!"));
                 self.finshed = true;
                 return;
             }

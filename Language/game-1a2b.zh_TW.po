@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: game-1a2b\n"
+"POT-Creation-Date: 2021-08-09 17:48+0800\n"
+"PO-Revision-Date: 2021-08-09 17:59+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-KeywordsList: gettext\n"
+"X-Poedit-Basepath: ../src\n"
+"Last-Translator: lifegpc <g1710431395@gmail.com>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_TW\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: game.rs:100 main.rs:26
+msgid "This was not an integer:"
+msgstr "這不是一個整數："
+
+#: game.rs:128
+msgid "Start to genrate random number which have <num> digits."
+msgstr "開始生成 <num> 位的亂數。"
+
+#: game.rs:135
+msgid "Genrate successfully."
+msgstr "生成成功。"
+
+#: game.rs:139
+msgid "<input> is not a vaild input."
+msgstr "<input> 不是有效的輸入。"
+
+#: game.rs:145
+msgid "You win!"
+msgstr "你贏了！"
+
+#: main.rs:9
+msgid ""
+"How many digits do you want to play with? (Please input a integer which "
+"between 1 to 10.)"
+msgstr "你想玩幾位數字的？（請輸入1-10以內的整數。）"
+
+#: main.rs:34
+msgid "This interger must be between 1 to 10."
+msgstr "該整數必須在0-10之內。"
